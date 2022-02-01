@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Supermercado+One&display=swap');
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Supermercado One', cursive; */ 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+:root{
+    --white: seashell;
+    --black: rgba(32, 32, 32, 0);
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(66,57,57,0.7),#fff 75%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: orange;    
+}
+
+.logo{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+span{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;       
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: yellow; */
+    width: 40%;
+    height: 60px;
+}
+li{
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    position: relative;
+
+}
+li::before{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 0%;
+    border-bottom: 1px solid var(--brown);
+    transition: .2s;
+}
+li:hover::before{
+    width: 100%;
+}
+
+/* conteúdo main box  */
+.content-box{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: yellow; 
+    margin-top: 1em;
+}
+.content{
+    width: 50%;
+    text-align: center;
+}
+.content-titulo{
+    font-family: 'Goudi Booletter 1911', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: black;
+}
+.content-h3{
+    font-family: 'Goudi Booletter 1911', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: black;
+}
+h2, h3{
+    font-family: 'Goudi Booletter 1911', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: .8em;
+    margin-top: 1em;
+    border-radius: 50px;
+    border: none;
+    outline:none;
+    background-color: var(--black);
+    cursor: pointer;
+}
+
+button{
+    font-size: 1rem;
+    padding: .8em;
+    margin-top: 1em;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+button:hover{
+    border: 1px solid var(--white);
+    background-color: gray;
+}
+.img-container{
+    width: 20%;
+    margin: auto;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 25%;
+}
+.img-github{
+    width: 20%;
+    size: 20px;
+    margin: auto;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.img-container img{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 25%;
+}
+
+.descricaoFoto{
+    font-size: 19px;
+    padding-left: 4em;
+    padding-right: 4em;
+    margin-bottom: 4em;
+}
+
+.fotoDia{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.content h3{
+    display:flex;
+    text-decoration: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.paginaPrincipal{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.databotao{
+    display: flex;
+    align-items: auto;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+input #date{
+    display: flex;
+    align-items: auto;
+    justify-content: space-around;
+    width: 180px;
+    height: 30px;
+}
+
+
+.resultados{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.none{
+    display:none;
+}
+
+.video{
+    width: 800px;
+    height: 500px;
+}
+
+.projetoSprint,
+.finalidade {
+    font-family: 'Goudi Booletter 1911', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--black);
+    display: flex;
+    text-align: center;
+    
+}
