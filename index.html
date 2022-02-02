@@ -7,21 +7,37 @@
     <link rel="icon" href="/assets/img/icons8-nasa-48.png">
     <title>Olha pro céu, meu amor!</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <script src="/assets/js/api.js"></script>    
+    <script src="/assets/js/api.js" defer></script>
+    <script src="assets/js/style.js" defer></script>    
     
 </head>
 <body>
-    
-    <img class="img-telescope" src="/assets/img/icons8-stargaze-unscreen.gif" alt="animation">
-    <h1>Imagem do Universo do dia!</h1>
-    <section>
-        <input type="date">
-        <button onclick="buscarImagem()">Buscar</button>
-    </section>
-    <h2 id="title"></h2>
-    <h3>Date: <span id="date"></span></h3>
-    <img id="pic" src="" alt="NASA Picture Of The Day" width="100%">
-    <p id="explanation"></p>
+
+    <main>
+        
+        <header>
+        <h1>O Universo em Imagem do dia</h1>        
+        <form >
+        <label for="datepiceker">Escolha uma data:
+        <input id="datepicker" type="date" min="16" max="" > 
+        </label>        
+        </form>   
+        <hr style="color: white; width: 60vw;">
+        </header>
+   
+        <section class="title-section">
+        <h2 id="title"></h2>
+        <p id="date"></p>
+        <small style="display: block;" id="copyright" ></small>
+        </section>
+   
+        <section id="media-section">
+        </section>
+   
+       <div class="description-div">
+        <p id="description"></p>
+       </div>
+        
     
     
      
