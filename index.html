@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/img/icons8-nasa-48.png">
+    <link rel="icon" href="icons8-nasa-48.png">
     <title>Olha pro céu, meu amor!</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <script src="/assets/js/api.js"></script>    
+    <link rel="stylesheet" href="styles.css">
+    <script src="/api.js" defer></script>    
     
 </head>
 <body>
     
-    <img class="img-telescope" src="/assets/img/icons8-stargaze-unscreen.gif" alt="animation">
+    <img class="img-telescope" src="/icons8-stargaze-unscreen.gif" alt="animation">
     <h1>Imagem do Universo do dia!</h1>
     <section>
         <input type="date">
-        <button onclick="buscarImagem()">Buscar</button>
+        <button onclick="buscarImagem()" id="buscaImagem">Buscar</button>
     </section>
     <h2 id="title"></h2>
     <h3>Date: <span id="date"></span></h3>

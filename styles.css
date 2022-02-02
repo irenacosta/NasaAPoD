@@ -3,20 +3,8 @@
     color: #222;
   }
 
-  /* Grid */
-.grid {
-	display: grid;
-}
-
-.logo {
-	grid-area: logo;
-}
-
-.nav {
-	grid-area: nav;
-}
-
-.container {
+   
+  .container {
     width: 70%;
     margin: 0 auto;
     text-align: center;
