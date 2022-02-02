@@ -1,25 +1,3 @@
-// const url = 'https://api.nasa.gov/planetary/apod?api_key='
-// const api_key = 'yJ3nTj6AarVzzFWpx5MLybGEHZ0ZBSfpbrh1mbR2'
-
-// const fetchNASAData = async () => {
-//     try {
-//         const response = await fetch(`${url}${api_key}`)
-//         const data = await response.json()
-//         console.log('NASA APOD data', data)
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
-
-// const displayData = data => {
-//     document.getElementById('title').textContent = data.title
-//     document.getElementById('date').textContent = data.date
-//     document.getElementById('picture').textContent = data.hdurl
-//     document.getElementById('explanation').textContent = data.explanation
-// }
-
-// fetchNASAData()
-
 let req = new XMLHttpRequest();
 const url = "https://api.nasa.gov/planetary/apod?api_key=";
 const api_key = "yJ3nTj6AarVzzFWpx5MLybGEHZ0ZBSfpbrh1mbR2";
