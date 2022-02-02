@@ -1,39 +1,47 @@
-export default function api(){
-    let titulo = $('.titulo-apod').text()
-    let data = $('.data-apod').text()
-    let imagem = $('img-apod').text()
-    let video = $('video-apod').text()
-    let explanation = $('explanation-apod').text()
+// const url = 'https://api.nasa.gov/planetary/apod?api_key='
+// const api_key = 'yJ3nTj6AarVzzFWpx5MLybGEHZ0ZBSfpbrh1mbR2'
+
+// const fetchNASAData = async () => {
+//     try {
+//         const response = await fetch(`${url}${api_key}`)
+//         const data = await response.json()
+//         console.log('NASA APOD data', data)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+// const displayData = data => {
+//     document.getElementById('title').textContent = data.title
+//     document.getElementById('date').textContent = data.date
+//     document.getElementById('picture').textContent = data.hdurl
+//     document.getElementById('explanation').textContent = data.explanation
+// }
+
+// fetchNASAData()
+
+let req = new XMLHttpRequest();
+const url = "https://api.nasa.gov/planetary/apod?api_key=";
+const api_key = "yJ3nTj6AarVzzFWpx5MLybGEHZ0ZBSfpbrh1mbR2";
+
+function buscarImagem (){
+    document.getElementById("buscaImagem").button = "voltei!"
 }
 
-const xhr = $.ajax({
-    method: 'GET',
-    url: 'https://api.nasa.gov/planetary/apod?api_key=yJ3nTj6AarVzzFWpx5MLybGEHZ0ZBSfpbrh1mbR2'+Date.value
-})
+req.open("GET", url + api_key);
+req.send();
 
-
-// SCRIPT DO PROJETO DO JEFFERSON
-
-// let botao = $('#button')
-// $('.video').addClass('none')
-
-// botao.on('click', function(){
-//     $('html').css('height' , 'auto')
-//     $.ajax({url:'https://api.nasa.gov/planetary/apod?api_key=BduVdecGn4sew3h9LBttGuARBVQJjR6e3PLqcbHw&date='+date.value,     
-//         success: function(result){         
-//         $('.descricao').text(result.explanation)         
-//         $('.autor').text(result.copyright)
-        
-//         if(result.media_type=='image'){
-//             $('.foto').attr('src', result.url)
-//             $('.video').addClass('none')
-//             $('.foto').removeClass('none')
-//         }else{
-//             $('.video').attr('src', result.url)
-//             $('.video').removeClass('none')
-//             $('.foto').addClass('none')
-//         }
-   
-//             }    
-//          }) 
-//      });
+req.addEventListener("load", (function(buscarImagem) {
+	if(req.status == 200 && req.readyState == 4){
+  	var response = JSON.parse(req.responseText);
+    document.getElementById("title").textContent = response.title;
+    document.getElementById("date").textContent = response.date;
+    document.getElementById("pic").src = response.hdurl;
+    document.getElementById("explanation").textContent = response.explanation;
+    document.getElementById("buscaImagem").addEventListener("click", buscarImagem);
+    
+    
+    }
+    }
+))
+buscarImagem()
