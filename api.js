@@ -3,7 +3,7 @@ const url = "https://api.nasa.gov/planetary/apod?api_key=";
 const api_key = "yJ3nTj6AarVzzFWpx5MLybGEHZ0ZBSfpbrh1mbR2";
 
 function buscarImagem (){
-    document.getElementById("buscaImagem").button = "voltei!"
+    document.getElementById("buscaImagem").addEventListener("click", buscarImagem)
 }
 
 req.open("GET", url + api_key);
@@ -16,9 +16,7 @@ req.addEventListener("load", (function(buscarImagem) {
     document.getElementById("date").textContent = response.date;
     document.getElementById("pic").src = response.hdurl;
     document.getElementById("explanation").textContent = response.explanation;
-    document.getElementById("buscaImagem").addEventListener("click", buscarImagem);
-    
-    
+      
     }
     }
 ))
