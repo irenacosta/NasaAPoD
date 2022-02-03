@@ -68,3 +68,37 @@
     #description{
      line-height:1.82;
     }
+
+    .link {
+      text-decoration: none;
+      color: cornsilk;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+    
+    .link:hover {
+      color: rgba(255, 137, 137, 0.9);
+      
+    }
+    
+    .link:visited {
+      color: cornsilk;
+    }
+    
+
+    .footerPrincipal {
+      color: rgba(255, 255, 255, 0.7);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+      font-size: 0.9rem;
+      width: 100%;
+      height: 40px;
+      padding-top: 2px;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(6px);
+           
+    }
+
+    .fab_fa-github {
+      size: 5px;
+    }
