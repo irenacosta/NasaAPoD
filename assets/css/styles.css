@@ -96,9 +96,4 @@
       justify-content: center;
       background-color: rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(6px);
-           
-    }
-
-    .fab_fa-github {
-      size: 5px;
     }
